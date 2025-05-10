@@ -1,13 +1,119 @@
 <!doctype html>
-<html>
+<html lang="en" class="dark scroll-smooth" id="htmlTag">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="/src/style.css" rel="stylesheet">
   <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
-  <title>Digital Agency </title>
+  <title>Digital Agency</title>
 </head>
-<body>
- 
+<body class="bg-white dark:bg-gray-900">
+
+  <!-- Header Section -->
+  <header class="w-full shadow-md bg-white dark:bg-gray-900">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center py-4">
+          <!-- Logo -->
+          <div class="flex items-center space-x-3">
+            <img
+              src="images/logo.png"
+              alt="Logo"/>
+          </div>
+
+          <!-- Desktop Nav -->
+          <nav class="hidden md:flex space-x-6 text-sm font-medium">
+            <a href="#" class="hover:text-red-500 dark:hover:text-red-400 dark:text-white">Home</a>
+            <a href="#" class="text-red-500 font-semibold dark:hover:text-red-400 dark:text-red-500">About Us</a>
+            <a href="#" class="hover:text-red-500 dark:hover:text-red-400 dark:text-white">Upskill</a>
+            <a href="#" class="hover:text-red-500 dark:hover:text-red-400 dark:text-white">Contact Us</a>
+          </nav>
+
+          <!-- Desktop Buttons -->
+          <div class="hidden md:flex items-center space-x-3">
+            <button class="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-md text-sm font-medium">
+              Register Interest
+            </button>
+            <button id="switch">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8 dark:stroke-white hover:scale-105 transition duration-300 ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>
+            </button>
+          </div>
+
+          <!-- Mobile Menu Button -->
+          <div class="md:hidden flex items-center space-x-2">
+            <button id="switch">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8 dark:stroke-white hover:scale-105 transition duration-300 ">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
+                </svg>
+            </button>
+            <button id="mobileMenuButton">
+              <svg
+                class="w-6 h-6 text-gray-800 dark:text-white"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden flex-col space-y-4 py-4 text-sm font-medium">
+          <a href="#" class="hover:text-red-500 dark:hover:text-red-400  dark:text-white">Home</a>
+          <a href="#" class="text-red-500 font-semibold dark:text-red-400  dark:hover:text-red-500">About Us</a>
+          <a href="#" class="hover:text-red-500 dark:hover:text-red-400  dark:text-white">Upskill</a>
+          <a href="#" class="hover:text-red-500 dark:hover:text-red-400  dark:text-white">Contact us</a>
+          <button class="bg-red-500 hover:bg-red-600 text-white px-5 py-2 rounded-md">
+            Register Interest
+          </button>
+        </div>
+      </div>
+    </header>
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+  const mobileBtn = document.getElementById('mobileMenuButton');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('flex');
+      });
+  </script>
+<script>
+
+const htmlTag = document.getElementById("htmlTag");
+document.getElementById("switch").addEventListener("click", function () {
+    htmlTag.classList.toggle("dark");
+});
+
+
+</script>
+
 </body>
 </html>
